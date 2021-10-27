@@ -55,5 +55,32 @@ int Room::getExit(int direction) {
             return west;
 
     }
+    // should never reach here
+    return -1; // means 'no exit here'
+}
 
+string Room::getExitDesc() {
+    // a helper method, to list off human-readable exits.
+    // example output: "none", "north", "east west"
+
+    string output = "";
+
+    if (north != -1) {
+        output += "north ";
+    }
+    if (south != -1) {
+        output += "south ";
+    }
+    if (east != -1) {
+        output += "east ";
+    }
+    if (west != -1) {
+        output += "west ";
+    }
+    // replace empty with "none"
+    if (output == "") {
+        output += "None";
+    }
+
+    return output;
 }

@@ -17,3 +17,21 @@
 1635373850 source:d:\dev\cpp\textadv\src\game.cpp
 	"game.h"
 
+1635376558 source:d:\dev\github\textadv-cpp\textadv\main.cpp
+	"game.h"
+
+1635377222 d:\dev\github\textadv-cpp\textadv\include\game.h
+	<iostream>
+	<string>
+	<vector>
+	"room.h"
+
+1635378053 d:\dev\github\textadv-cpp\textadv\include\room.h
+	<string>
+
+1635378053 source:d:\dev\github\textadv-cpp\textadv\src\room.cpp
+	"room.h"
+
+1635378065 source:d:\dev\github\textadv-cpp\textadv\src\game.cpp
+	"game.h"
+

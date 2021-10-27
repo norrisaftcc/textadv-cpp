@@ -28,6 +28,8 @@ class Room
         string getDescription();
         //vector<int> getExits();     // this is something we may do later
         int getExit(int direction);   // for now we'll get each exit individually
+        string getExitDesc();        // used in  room descriptions
+                                      // TODO: maybe just print this when we get descriptions
 
         // setting some constants -- it's convenient to
         // be able to refer to an exit as NORTH rather than 0,

@@ -40,7 +40,7 @@ class Game
         vector<Room> rooms;
 
         // player information
-        int playerRoom;     // which room the player is in
+        int playerLoc;     // which room the player is in
 
 
 

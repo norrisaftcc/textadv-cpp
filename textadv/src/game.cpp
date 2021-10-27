@@ -17,7 +17,7 @@ Game::Game()
     Room kitchen = Room("Kitchen", "Fridge, oven, all the usual stuff.", -1, 0, -1, -1);
     rooms[1] = kitchen;
 
-    playerRoom = 0; // start player in living room
+    playerLoc = 0; // start player in living room
 
 }
 
@@ -34,10 +34,34 @@ void Game::runCommand(string cmd) {
     // for now, it's just if statements.
 
     if ( cmd == "look" ) {
-        string name = rooms[playerRoom].getName();
-        string desc = rooms[playerRoom].getDescription();
+        string name = rooms[playerLoc].getName();
+        string desc = rooms[playerLoc].getDescription();
         cout << name << endl << desc << endl;
-        cout << "(exits not yet implemented)" << endl;
+        cout << "Exits: ";
+        string exitsText = rooms[playerLoc].getExitDesc();
+        cout << exitsText << endl;
+    }
+    else if (cmd == "go north") {
+        int newPlayerLoc;
+        newPlayerLoc = rooms[playerLoc].getExit(0);
+        if (newPlayerLoc != -1) {
+            playerLoc = newPlayerLoc;
+            cout << "Moved to room #" << newPlayerLoc << endl;
+        } else {
+            cout << "Can't go that way." << endl;
+        }
+
+    }
+    else if (cmd == "go south") {
+        int newPlayerLoc;
+        newPlayerLoc = rooms[playerLoc].getExit(1);
+        if (newPlayerLoc != -1) {
+            playerLoc = newPlayerLoc;
+            cout << "Moved to room #" << newPlayerLoc << endl;
+        } else {
+            cout << "Can't go that way." << endl;
+        }
+
     }
     else {
         cout << "Command not implemented." << endl;
