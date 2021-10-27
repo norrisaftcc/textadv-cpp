@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1635375952 source:d:\dev\cpp\textadv\src\room.cpp
+	"room.h"
+
+1635375330 d:\dev\cpp\textadv\include\room.h
+	<string>
+
+1635376558 source:d:\dev\cpp\textadv\main.cpp
+	"game.h"
+
+1635376526 d:\dev\cpp\textadv\include\game.h
+	<iostream>
+	<string>
+	<vector>
+	"room.h"
+
+1635373850 source:d:\dev\cpp\textadv\src\game.cpp
+	"game.h"
+
